@@ -1,0 +1,8 @@
+---
+# defaults file for sususudio
+remove_dir: false
+remove_old_user: false
+user_groups: "[sudo]"
+add_key: false
+user_key: ""
+enable_passwordless_sudo: false
