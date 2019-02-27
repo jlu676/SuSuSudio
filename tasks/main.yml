@@ -1,23 +1,23 @@
 ---
   tasks:
-  - name: Remove old user {{createuser}}
+  - name: "Remove old user {{createuser}}"
     user: 
-      name: {{createuser}}
+      name: "{{createuser}}"
       state: absent
-      remove: {{remove_dir}}
+      remove: "{{remove_dir}}"
     when: remove_old_user ==  true
     become: yes
   - name: add user {{createuser}}
     user:
-      name: {{createuser}}
+      name: "{{createuser}}"
       shell: /bin/bash
-      group: {{createuser}}
-      groups: {{user_groups}}
+      group: "{{createuser}}"
+      groups: "{{user_groups}}"
       append: yes
     become: yes
   - name: Set authorized key
     authorized_key:
-      user: {{createuser}}
+      user: "{{createuser}}"
       state: present
       key: "{{ lookup('file', '{{userkey}}'') }}"
       validate: userkey != ""
