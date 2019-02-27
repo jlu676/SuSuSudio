@@ -2,6 +2,6 @@
 - hosts: localhost
   remote_user: root
   roles:
-    - role: sususudio
+    - role: SuSuSudio
       create_user: test002
       userkey: ""
