@@ -23,7 +23,7 @@
       validate: userkey != ""
     when: add_key == true
     become: yes
-    become_user: {{createuser}}
+    become_user: "{{createuser}}"
   - name: Allow user to sudo with out password
     template: 
       src: sudoers.j2
